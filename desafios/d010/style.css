@@ -53,7 +53,7 @@ header > p {
     font-size: 1.2em;
     max-width: 500px;
     margin: auto; /* pq qnd colocou a largura de 500 ele virou um bloco */
-    margin-bottom: 30px; /* pra qnd diminuir o tamanho ñ ficar gurudado no menu */
+    padding-bottom: 50px; /* pra qnd diminuir o tamanho ñ ficar gurudado no menu */
     padding: 10px 10px 0px 0px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
 }
