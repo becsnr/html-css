@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('pacote-projeto-d010/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+:root { /* criar variáveis; tudo que colocar aqui vai servir pro documento inteiro */
+    --cor0: #C5EBD6;
+    --cor1: #84E1AD;
+    --cor2: #2FA866;
+    --cor3: #207144;
+    --cor4: #1A5C38;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+    color: white;
+    text-align: center;
+    min-height: 150px;
+    padding-top: 40px; /* o texto desgruda la de cima */
+}
+
+header > h1 {
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+header > p {
+    text-align: center;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 500px;
+    margin: auto; /* pq qnd colocou a largura de 500 ele virou um bloco */
+    margin-bottom: 30px; /* pra qnd diminuir o tamanho ñ ficar gurudado no menu */
+    padding: 10px 10px 0px 0px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow:  0px 7px 7px rgba(0, 0, 0, 0.192);
+}
+
+nav > a {
+    color: var(--cor1);
+    text-decoration: none;
+    font-family: var(--fonte-padrao);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition-duration: 0.5s; /* qnd o mouse passar vai demorar 0.5s de transição */
+}
+
+nav > a:hover {
+    background-color: var(--cor2);
+    color: var(--cor5);
+}
+
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto; 
+    margin-bottom: 20px;
+    padding: 20px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.215);
+    border-radius: 0px 0px 10px 10px;
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+main h1 {
+    font-family: var(--fonte-android);
+    font-size: 1.8em;
+    font-weight: normal;
+    color: var(--cor4);
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 10px 0px;
+    color: var(--cor3);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+}
+
+main p {
+    text-indent: 30px;
+    text-align: justify;
+    font-family: var(--fonte-padrao);
+    margin: 15px 0px;
+    font-size: 1em;
+    line-height: 2em; /* espaçamento entre linhas */
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+    
+}
+
+main a {
+    color: var(--cor4);
+    text-decoration: none;
+    background-color: var(--cor0);
+    padding: 2px 6px;
+    font-weight: bold;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor3);
+}
+
+main a::after {
+    content: "\1F517";
+}
+
+div#video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%; /* as bordinhas pretas do video */
+    position: relative;
+}
+
+div#video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.280);
+}
+
+aside > h3 {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1em;
+    background-color: var(--cor4);
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /* crescer pra fora */
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    list-style-position: inside; /* a posição da lista */
+    list-style-type: '\2714\00A0\00A0'; /* trocar as bolinhas pelo emoji; esse \00A0 é o espaço sem quebra; não é compatível com tds os navegadores */
+    columns: 2; /* colunas */
+}
+
+li {
+    text-decoration: dashed;
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 0.8em;
+    text-align: center;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 { /* box-level */
+            /* acessar DevTools no chrome: ctrl + shift + i */
+
+            /* o h1 é um display: block; se quiser transforma-lo em inline é display: inline; e quando é inline ñ pode fazer altura e largura */
+
+            background-color: lightblue;
+
+            /* box size */
+            height: 300px;
+            width: 300px;
+
+            /* AS SHORTHANDS SÃO NO SENTIDO HORARIO */
+
+            border: 10px solid darkturquoise;
+
+            /* border-width: 10px;
+            border-style: solid;
+            border-color: darkturquoise; */
+
+            padding: 10px; /* como as medidas estão tds iguais pode deixar só um valor*/ 
+            /* se usar dois valores tipo padding: 10px 20px vai ser top e bottom 10px; right e left 20px */
+
+            /*padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px; */
+
+            margin: 20px 20px 40px 20px;
+
+            /* margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px;*/
+            /* centralizar caixa 
+                margin: auto;
+                margin 20px auto 40px auto
+            */
+
+            outline: 5px dashed blue;
+
+            /*outline-width: 5px;
+            outline-style: dashed;
+            outline-color: blue; */
+        }
+
+        a { /* inline-level */ /* ñ faz altura e largura */
+            /* se quiser transforma-lo em box é display: block;*/
+            /* se quiser colocar altura e largura em um inline é só usar display: inline-block*/
+
+            border: 10px solid plum;
+
+            /*border-width: 10px;
+            border-style: solid;
+            border-color: plum;*/
+
+            padding: 10px;
+
+            /*padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1> <!-- h1 é uma caixa box-level -->
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/*
+    em HTML é id = em CSS é # (só pode um elemento)
+    em HTML é class = em CSS é . (pode vários elementos)
+
+    pode colocar mais de uma class em um elemento: class="basico destaque"
+    pode colocar id e class no mesmo elemento: id="principal" class="destaque"
+    id é único
+*/
+
+body {
+    background-color: rgba(204, 147, 254, 0.501);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgb(144, 29, 244); 
+}
+
+h1#principal {
+    text-align: center;
+    background-color: rgb(144, 29, 244);
+    color: white;
+}
+
+h2 {
+    color: rgb(83, 4, 153);
+}
+
+.basico {
+    color: rgb(19, 132, 30);
+}
+
+.intermediario {
+    color: #b5a624;
+}
+
+.avançado {
+    color: #b21f1f;
+}
+
+.destaque {
+    background-color: rgb(197, 197, 96, 0.438);
+}
