@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento Vertical</title>
+    <style> /* margin: auto; só serve para alinhamento horizontal */
+        #container {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+
+            position: relative; /* já é padrão */
+
+            height: 96vh;
+            padding: 10px;
+            background-color: rgb(188, 127, 245);
+        }
+
+        #conteudo {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+
+            position: absolute;
+
+            height: 200px;
+            width: 400px;
+            background-color: lightpink;
+
+            /* qnd usa o position: absolute; pode usar essas propriedades: */
+            left: 50%;
+            top: 50%;
+            /* os valores podem ser px ou % */
+            /* Com essa configuração (left, right), o elemento interno realmente será alinhado pelo centro, mas tendo como referência o CANTO SUPERIOR ESQUERDO DA CAIXA FILHO... resultando especificamente no alinhamento desse ponto (canto superior esquerdo da box) e não da caixa como um todo. */
+
+            /* Para transformar o "ponto de alinhamento" de uma caixa (mover a caixa), usamos a Propriedade de Estilo " transform ". */
+            /* As funções mais usadas para o transform são: rotate, scale, skew e translate. Para centralizar o "ponto de alinhamento" na nossa box, iremos usar a função "translate". */
+
+            transform: translate(-50%, -50%); /*O PRIMEIRO VALOR representa o deslocamento horizontal do ponto, e o SEGUNDO VALOR representa o deslocamento vertical desse ponto. Utilizamos valores em % para ajustar o ponto de referência exatamente no meio da box (-50% -50%), mas dependendo do que você quer fazer, também pode usar valores em px ou outra unidade de medida.*/
+
+            /* translate -> A função de translate serve para mover o elemento para os lados ou para cima/baixo. Mudar o seu "ponto de alinhamento"... A sintaxe pode ser especifica para um dos eixos x/y ( translateX ou translateY ), como pode ser apenas translate, abrangendo os dois eixos ( x, y ). Obs.: Para ir para o lado esquerdo ou para cima, use valores negativos.
+
+            rotate -> Como o nome já sugere, é utilizada para rotacionar o elemento, de 0 a 360 graus. Utilizando valores positivos, a rotação será realizada no sentido horário e, utilizando valores negativos, no sentido Anti-horário.
+
+            scale -> Utilizado para redimensionar os elementos, tendo como escala padrão o valor "1". Valores maiores que 1, aumentarão o tamanho do elemento, e valores menores que 1 diminuirão sua escala.
+
+            skew -> É utilizado para "distorcer" os elementos, alterando os ângulos.
+
+            Nota: A propriedade de estilo "transform" e suas funções é muito utilizada juntamente com a pseudo-classe "hover" e com a propriedade de estilo "transition" para criar efeitos visuais */
+        }
+    </style>
+</head>
+<body>
+    <section id="container"> <!-- qnd for centralizar verticalmente tem q ter a presença de um container e um conteudo -->
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
