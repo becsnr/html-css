@@ -9,47 +9,66 @@
     --fonte-padrao: 'Sriracha', Arial, Helvetica, sans-serif;
 }
 
-body {
+* {
     margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
 }
 
 header {
     background-color: black;
     color: white;
     text-align: center;
-    height: 150px;
 }
 
 header h1 {
+    padding-top: 50px;
     font-family: var(--fonte-destaque);
     font-weight: normal;
-    margin: 0px;
+    font-variant: small-caps; /* coloca tds em maisculo porem as primeiras letras ficam maiores */
+    /* text-transform: uppercase; colocar tds as letras em maisculo ou minusculo*/
 }
 
 header p {
     font-family: var(--fonte-destaque);
     font-weight: normal;
+    padding-bottom: 50px;
 }
 
-header a {
+a {
     color: white;
     text-decoration: none;
+    font-weight: bolder;
 }
 
-section p {
-    font-size: 1.8em;
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     line-height: 2em;
-    padding: 10px;
+    padding-left: 30px;
 }
 
-.imagem {
-    height: 500px;
+section.branco {
+    background-color: white;
+    color: black;
 }
 
-.texto {
-    background-color: rgb(228, 10, 10);
-    width: 200px;
-    padding: 10px 10px;
+section.imagem {
+    background-color: rgba(0, 0, 0, 0.427);
+    color: white;
+}
+
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.223);
+    width: 400px;
     border-radius: 10px;
 }
 
@@ -59,4 +78,11 @@ section p {
 
 #papel {
     background: url('../imagens/background002.jpg') no-repeat fixed center center /cover;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
 }
