@@ -5,8 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 :root {
-    --fonte-destaque: 'Passion One', Arial, Helvetica, sans-serif;
-    --fonte-padrao: 'Sriracha', Arial, Helvetica, sans-serif;
+    --fonte-destaque: 'Passion One', sans-serif;
+    --fonte-padrao: 'Sriracha', sans-serif;
 }
 
 * {
@@ -17,6 +17,7 @@
 html, body {
     min-height: 100vh;
     background-color: darkgray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
@@ -28,6 +29,7 @@ header {
 header h1 {
     padding-top: 50px;
     font-family: var(--fonte-destaque);
+    font-size: 10vh; /* p tamanho da letra vai se adaptar ao tamanho da tela, mas ñ é o correto. o bom é media query */
     font-weight: normal;
     font-variant: small-caps; /* coloca tds em maisculo porem as primeiras letras ficam maiores */
     /* text-transform: uppercase; colocar tds as letras em maisculo ou minusculo*/
@@ -54,6 +56,8 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--fonte-padrao);
+    font-size: 3.5vh;
 }
 
 section.branco {
@@ -67,9 +71,11 @@ section.imagem {
 }
 
 section.imagem > p {
+    display: inline-block; /* vai transformar na caixa q se adapta ao tamanho do conteudo */
     background-color: rgba(0, 0, 0, 0.223);
     width: 400px;
     border-radius: 10px;
+    padding: 5px;
 }
 
 #flor {
