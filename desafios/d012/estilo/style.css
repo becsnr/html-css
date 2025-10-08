@@ -73,7 +73,7 @@ section.imagem {
 section.imagem > p {
     display: inline-block; /* vai transformar na caixa q se adapta ao tamanho do conteudo */
     background-color: rgba(0, 0, 0, 0.223);
-    width: 400px;
+    
     border-radius: 10px;
     padding: 5px;
 }
