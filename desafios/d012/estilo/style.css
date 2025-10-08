@@ -60,6 +60,10 @@ section {
     font-size: 3.5vh;
 }
 
+section > p {
+    padding-bottom: 2em;
+}
+
 section.branco {
     background-color: white;
     color: black;
@@ -68,21 +72,22 @@ section.branco {
 section.imagem {
     background-color: rgba(0, 0, 0, 0.427);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.458); /* sombra interna */
 }
 
 section.imagem > p {
     display: inline-block; /* vai transformar na caixa q se adapta ao tamanho do conteudo */
     background-color: rgba(0, 0, 0, 0.223);
-    
     border-radius: 10px;
     padding: 5px;
+    text-shadow: 1px 1px 0px black;
 }
 
-#flor {
+section#flor {
     background: url('../imagens/background001.jpg') no-repeat fixed center center /cover;
 }
 
-#papel {
+section#papel {
     background: url('../imagens/background002.jpg') no-repeat fixed center center /cover;
 }
 
