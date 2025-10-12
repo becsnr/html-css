@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -19,9 +20,30 @@
             padding: 10px;
         }
 
+        caption { /* legenda da tabela */
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky; /* posição colado */
+            top: 0; /* dizendo para colar na parte 0 */
+            background-color: gray;
+        }
+
+        tbody tr:nth-child(odd) { /* impar = 2n-1 */
+            background-color: lightgray;
+        }
+
+        tbody tr:nth-child(even) { /* par = 2n */
+            background-color: white;
         }
 
         td.num {
@@ -34,6 +56,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -43,10 +66,18 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>Populaçãp</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+                <!-- o parâmetro scope serve para especificarmos se o título da nossa célula é para uma coluna ou para uma linha. Deve inseri-lo dentro da tag de abertura do th.
+
+                Se o título da sua célula for para uma COLUNA, use como definição do parâmetro "scope" o VALOR "col".
+
+                Se o título da sua célula for para uma LINHA, use como definição do parâmetro "scope" o VALOR "row".
+
+                Esse parâmetro é importante para que os mecanismos de busca (google por ex.) consigam analisar dos dados da sua tabela de forma coerente, de forma que faça sentido. Tais parâmetros não causam nenhum resultado visual, mas é muito útil de um ponto de vista semântico. -->
             </tr>
         </thead>
         <tbody>
@@ -161,10 +192,14 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num">213 421 037</td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore laboriosam praesentium ut illum deserunt, sint nostrum, consequuntur provident necessitatibus nobis harum at, laudantium omnis voluptatem. Nihil nulla minus adipisci cum!
+    Culpa veritatis qui ut totam, numquam similique aperiam minima nulla dolorum quos excepturi ad, officia doloremque ex debitis adipisci rerum laborum aspernatur cumque exercitationem omnis quibusdam ullam optio id? Repellendus!
+    Quidem ducimus amet, quas facere dignissimos tempore perferendis sequi nostrum laudantium aliquam ut quos dolorem facilis labore ullam commodi quibusdam reiciendis quod necessitatibus aspernatur repellendus. Blanditiis ratione dolorem tempore itaque?
+    Cumque, maiores inventore? Pariatur aspernatur deserunt esse, fuga natus quibusdam voluptas quaerat ipsa ipsum assumenda ut perspiciatis eos facere blanditiis ullam tempore aut id saepe impedit. Delectus esse assumenda ex.</p>
 </body>
 </html>
