@@ -10,7 +10,7 @@
         }
 
         table {
-            width: 400px;
+            width: 500px;
             border-collapse: collapse;
         }
 
@@ -29,6 +29,7 @@
         tr.media {
             background-color: rgb(102, 102, 102);
             color: white;
+            text-align: left;
         }
     </style>
 </head>
@@ -36,10 +37,10 @@
     <table>
         <thead>
             <tr>
-                <th rowspan="2">Área</th>
-                <th rowspan="2">Disciplinas</th>
-                <th colspan="2">Notas</th>
-                <th rowspan="2">Média</th>
+                <th rowspan="2" scope="row">Área</th>
+                <th rowspan="2" scope="rowgroup">Disciplinas</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="row">Média</th>
             </tr>
             <tr>
                 <th>Nota 1</th>
@@ -48,7 +49,7 @@
         </thead>
         <tbody>
             <tr>
-                <th rowspan="4">Exatas</th>
+                <th rowspan="4" scope="rowgroup">Exatas</th>
                 <td>Matemática</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -73,7 +74,7 @@
                 <td>0.0</td>
             </tr>
             <tr class="media">
-                <th colspan="4">Média de Exatas</th>
+                <th colspan="4" scope="row">Média de Exatas</th>
                 <td>0.0</td>
             </tr>
             <tr>
@@ -90,7 +91,7 @@
                 <td>0.0</td>
             </tr>
             <tr class="media">
-                <th colspan="4">Média de Humanas</th>
+                <th colspan="4" scope="row">Média de Humanas</th>
                 <td>0.0</td>
             </tr>
         </tbody>
