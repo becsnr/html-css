@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Responsivas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.2em;
+            font-weight: bolder;
+            padding: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(228, 228, 228);
+        }
+
+        div#container {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas em telas pequenas</h1>
+    <p>Algumas tabelas às vezes ficam lateralmente muito grandes, fazendo com que o conteúdo acabe vazando em telas pequenas (celulares)... Resultando numa página com rolagem lateral, que é indesejada quando trabalhamos com responsividade.</p>
+
+    <p>Para resolver isso, devemos tornar a tabela da sua página responsiva. A primeira coisa que devemos fazer para ajeitar a formatação da nossa tabela é envelopar a tag &lt;table&gt; (toda a tabela) com uma &lt;div&gt;, posteriormente identifique essa div com um id ou class (nome: container).</p>
+
+    <p>
+        Em seguida, abra um seletor CSS para a div/class que acabamos de configurar (div.container {...} ) e insira a seguinte declaração: <br>
+        <pre>
+            div.container {
+                overflow-x: auto;
+            }
+        </pre>
+    </p>
+
+    <p>O overflow é uma propriedade de estilo do CSS utilizada para tratar conteúdos que ultrapassam os limites de um elemento. O objetivo do overflow é fazer com que conteúdos muito grandes possam caber dentro de uma página através do uso de barras de rolagem.</p>
+
+    <p>Apenas com essa configuração já é suficiente para tornar a nossa tabela responsiva. Na prática, quando essa tabela for aberta numa tela com uma largura inferior à mesma, ela será "cortada" e exibida dentro de uma caixa com barras de rolagem horizontal, evitando o vazamento.</p> 
+
+    <p>Toda essa adaptação ocorre de forma automática, isso se deve ao fato de usarmos o valor "auto". Esse valor (auto) exibe barras de rolagem somente quando necessário, somente quanto a largura do container se torna insuficiente para exibir o elemento.</p>
+
+    <h2>PROPRIEDADE - OVERFLOW:</h2>
+
+    <p>Usamos a propriedade " overflow-x ", entretanto existem também o " overflow-y " e o " overflow ". Segue uma descrição de cada um deles:</p>
+
+    <p>overflow-x - A propriedade CSS "overflow-x" é usada para definir o que deve ser mostrado quando o conteúdo transborda dos extremos esquerdo e direito de um elemento em bloco (eixo horizontal).</p>
+
+    <p>overflow-y - A propriedade CSS "overflow-y" define o que deve ser mostrado quando o conteúdo transborda dos extremos superior e inferior de um elemento em bloco (eixo vertical).</p>
+
+    <p>overflow - A propriedade CSS "overflow" é uma abreviação para as propriedades "overflow-x" e "overflow-y" em uma única declaração.</p>
+
+    <p>
+        As propriedades overflow aceitam alguns valores, dentre os principais: <br>
+        <ul>
+            <li>visible - O valor "visible" exibe o conteúdo que exceder o tamanho do elemento fora da área designada para ele,  (valor padrão).</li>
+            <li>hidden - O valor "hidden" simplesmente corta o conteúdo que exceder o tamanho do elemento.</li>
+            <li>scroll - O valor "scroll" exibe "a todo momento" barras de rolagem para permitir que o usuário role o conteúdo que exceder o tamanho do elemento.</li>
+            <li>auto - O valor "auto" exibe barras de rolagem somente quando necessário (largura ou altura insuficientes)</li>
+        </ul>
+    </p>
+
+    <div id="container">
+        <table>
+            <caption>Tabelas responsivas</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Jan</th>
+                    <th>Fev</th>
+                    <th>Mar</th>
+                    <th>Abr</th>
+                    <th>Mai</th>
+                    <th>Jun</th>
+                    <th>Jul</th>
+                    <th>Ago</th>
+                    <th>Set</th>
+                    <th>Out</th>
+                    <th>Nov</th>
+                    <th>Dez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TV 40º</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Home Theater</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Samsung Galaxy S20</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>iPad Mini</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>PlayStation 4</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Lava louças</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Amazon Echo</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
