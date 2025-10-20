@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga illum, veniam amet sit dolorum cupiditate at temporibus quibusdam labore maiores, voluptatibus incidunt deserunt, vitae ipsa adipisci sunt eaque corporis obcaecati reprehenderit pariatur delectus quasi. Fuga iure reprehenderit magni nostrum? Sapiente praesentium aspernatur maiores suscipit, culpa enim iure maxime aperiam illo voluptatem, unde distinctio repudiandae doloremque illum aut, vero delectus dolorum voluptate ad doloribus dignissimos labore sed eos? Dolorem atque temporibus recusandae incidunt officia libero necessitatibus qui repudiandae, iusto dicta impedit quisquam sequi soluta praesentium deleniti commodi, dignissimos ut ducimus dolore laborum maiores! Consectetur, enim commodi veniam dolores porro similique iste?</p>
+
+    <ul>
+        <!--  Quando clicar em algum desses links, a página vai aparecer no iframe. Para tal, na tag do iframe precisa inserir o parâmetro " name ", e atribuir a ele uma nomenclatura (de sua preferência - ex: 'frame'). Para associarmos os nossos links de páginas secundárias ao iframe, devemos inserir na tag dos links (<a></a>) o parâmetro "target", tendo como valor justamente a nomenclatura do parâmetro "name" ('frame' no caso do nosso exemplo). -->
+        <li><a href="paginas-extras/pagina001.htm" target="frame">Primeira página</a></li>
+        <li><a href="paginas-extras/pagina002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pagina003.html" target="frame">Terceira página</a></li>
+        <li><a href="../../desafios/d009/index.html" target="frame">Quarta página</a></li>
+        <li><a href="../../desafios/d011/astronauta.html" target="frame">Quinta página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit vel fuga veniam quos quia ducimus aspernatur maiores pariatur aperiam ipsum, aliquid aliquam numquam, odio corporis. Deleniti consectetur commodi accusamus recusandae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam officiis iste consequuntur quaerat ratione officia nulla atque sequi in assumenda maxime, dolores vitae, suscipit nesciunt tempora impedit praesentium eaque sunt?</p>
+
+    <iframe frameborder="1" id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur totam eveniet beatae est velit esse vitae ducimus officiis. Fugit enim qui laboriosam maxime natus nulla debitis nostrum excepturi aspernatur at deserunt, aperiam quidem! Corporis aspernatur repellendus nemo placeat excepturi commodi dolorem ipsam harum culpa unde laudantium, quisquam dolore eligendi repudiandae.</p><img src='imagens/cute.jpg'</img>">Infelizmente seu navegador não é compatível</iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur totam eveniet beatae est velit esse vitae ducimus officiis. Fugit enim qui laboriosam maxime natus nulla debitis nostrum excepturi aspernatur at deserunt, aperiam quidem! Corporis aspernatur repellendus nemo placeat excepturi commodi dolorem ipsam harum culpa unde laudantium, quisquam dolore eligendi repudiandae. Ad nobis molestias eius tempora, quo similique qui officiis ex fugit in at consectetur! Sapiente exercitationem magni dicta pariatur vitae. Tempora laboriosam harum ratione dolore consectetur nostrum quo cum quasi officiis quisquam exercitationem aspernatur libero fugit iste minus quidem ab placeat non praesentium adipisci voluptate, ea esse nobis magni! Tempora?</p>
+</body>
+</html>
