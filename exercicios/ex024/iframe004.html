@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem nemo deleniti tenetur repudiandae quisquam nesciunt alias dolor corporis atque. Reprehenderit velit, aliquam delectus provident quos dolor. Nemo eos nostrum odio!</p>
+
+    <!-- iframes mais seguros
+        SANDBOX: Ao inserirmos esse parâmetro com o valor "sandbox", ele bloqueia todo e qualquer acesso que outros sites (que estejam dentro do iframe) tentem fazer.
+
+        REFERRERPOLICY: Esse parâmetro serve para configurar a política de referência. Quando usamos o valor "no-referrer", informamos que aquilo que está carregado dentro do iframe, não vai colettar nenhum tipo de informação do usuário.
+    -->
+
+    <iframe src="paginas-extras/pagina004.html" frameborder="1" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">Seu navegador não é compatível com isso...</iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus explicabo corporis enim dolor. Quo, nulla perspiciatis magnam quidem natus asperiores eius nisi dolorum, dignissimos, maxime eaque facilis. Quo, odit reprehenderit?</p>
+</body>
+</html>
