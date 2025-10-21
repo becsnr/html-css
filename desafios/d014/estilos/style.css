@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('../imagens/fundo-madeira.jpg') no-repeat fixed center center /cover;
+}
+
+#iphone {
+    position: relative;
+    width: 300px;
+    border: 10px solid red;
+    margin: auto;
+}
+
+#celular {
+    width: 300px;
+    height: 500px;
+    background: url('../imagens/frame-iphone.png') no-repeat center center /contain;
+    border: 2px solid white;
+}
+
+iframe {
+    position: absolute;
+    top: 50px;
+    left: 45px;
+    width: 213px;
+    height: 400px;
+    background: url('../imagens/tela-home.jpg') no-repeat center center /contain;
+}
+
+a {
+    background: center center;
+}
+
+#logos {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* define o espaço entre os itens dentro de um contêiner */
+}
+
+#logos img {
+    width: 50px;
+    border-radius: 50%;
+}
