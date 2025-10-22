@@ -27,15 +27,14 @@ main {
     width: 300px;
     height: 500px;
     background: url('../imagens/frame-iphone.png') no-repeat center center /contain;
-    border: 2px solid white;
 }
 
 iframe {
     position: absolute;
-    top: 64px;
-    left: 44px;
-    width: 212px;
-    height: 376px;
+    top: 63px;
+    left: 43px;
+    width: 214px;
+    height: 378px;
     
 }
 
@@ -67,6 +66,6 @@ a > img {
     transition: transform 0.5s, border 1s; /* mexerem suavemente */
 }
 
-#logos img:active { /*para dar um efeito de clique (os botões "afundam") quando clicados */
+#logos img:active { /* para dar um efeito de clique (os botões "afundam") quando clicados */
     transform: scale(95%);
 }
