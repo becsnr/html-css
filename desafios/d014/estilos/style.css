@@ -32,15 +32,16 @@ main {
 
 iframe {
     position: absolute;
-    top: 50px;
-    left: 45px;
-    width: 213px;
-    height: 400px;
-    background: url('../imagens/tela-home.jpg') no-repeat center center /contain;
+    top: 64px;
+    left: 44px;
+    width: 212px;
+    height: 376px;
+    
 }
 
 a > img {
-    background: center center;
+    background: no-repeat bottom center /cover;
+    
 }
 
 #logos {
