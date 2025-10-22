@@ -56,4 +56,13 @@ a > img {
 #logos img {
     width: 50px;
     border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.44);
+    box-sizing: border-box; /* pra borda fazer parte da caixa */
+}
+
+#logos img:hover { /* quando passar o mouse em cima, as bolinhas mexem */
+    border: 2px solid rgba(255, 255, 255, 0.600);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.521); /* aumentar a sombra */
+    transition: transform 0.5s, border 1s; /* mexerem suavemente */
 }
