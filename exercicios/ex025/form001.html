@@ -13,7 +13,7 @@
 <body>
     <h1>Meu primeiro formulário</h1>
     <!-- Tudo aquilo que estiver dentro da tag form será considerado como conteúdo do formulário.  -->
-    <form action="cadastro.php" autocomplete="off"> <!-- o autocomplete é pra tirar a janelinha de sugestão; o action é pra onde vai ser enviado o formulário -->
+    <form action="cadastro.php" method="post" autocomplete="off"> <!-- o autocomplete é pra tirar a janelinha de sugestão; o action é pra onde vai ser enviado o formulário -->
 
         <p><label for="inome">Nome:</label> 
             <input type="text" name="nome" id="inome"></p> <!-- input de texto -->
@@ -38,6 +38,64 @@
         O texto “Nome:” aparece antes da caixa de texto.
         Quando a pessoa clica no texto “Nome:”, o foco vai automaticamente para o campo de entrada (<input>).
         Isso só funciona porque o for="nome" do <label> é igual ao id="nome" do <input>.
+    -->
+
+    <!---   GET E POST:
+            Quando vamos enviar os dados de um formulário HTML para uma linguagem de programação (back-end), temos que especificar qual método de envio que iremos utilizar para mandar esses dados. Para fazer isso, dentro da tag de abertura do formulário (<form>), basta adicionar o atributo " method "... Como valor desse atributo, podemos inserir "GET" ou "POST"... Especificando assim o método de envio dos dados da Requisição HTTP. Portanto, o atributo "method" define o método HTTP com que o formulário HTML irá lidar com os dados inseridos pelo usuário. 
+
+            Segue uma descrição desses métodos:
+
+            GET:
+
+            Esse é o método padrão de envio de dados. Esse método utiliza a própria URL para enviar os dados do formulário ao servidor. Quando usamos o método HTTP GET, a mensagem não necessita de um corpo, pois os dados estão contidos na URL. Por isso, os parâmetros são passados no cabeçalho da Requisição HTTP e podem ser vistos pela URL.
+
+            O navegador condensa todos os dados digitados no formulário pelo visitante, coloca junto com a URL e envia como parte do endereço acessado, separando o endereço da URL do arquivo em si, e os dados do usuário, por um "?"...  
+
+            Nesse processo, os dados do formulário são enviados em pares nome-valor (nomenclatura do name e o dado). Para cada campo, um par de "nome-valor" é gerado para ser enviado.
+
+            Todo componente de entrada (input) colocado dentro do formulário, com a propriedade "name" preenchida, gera um par nome=valor para ser enviado no servidor.
+
+            Isso significa que, por consequência, no método GET esses dados (pares "nome-valor") ficam visíveis na URL... Eles ficam expostos de forma que o usuário consegue ver com facilidade (ou qualquer pessoa que tenha recebido e visualizado tal link/URL).
+
+            Importante: Para qualquer sistema de busca, no qual temos um formulário em que o usuário faz uma pesquisa por algo (ex: Google, Formulário de busca de produtos da "Am4zuummm", ML e por aí vai), o método de envio GET é algo extremamente importante. Isso porque, como os dados da busca ficam na URL, isso torna o link do RESULTADO DA BUSCA compartilhável. 
+
+            Se um formulário de busca for configurado com o método de envio "POST", esses dados de busca não ficarão na URL e portando a página de um RESULTADO DE BUSCA já processada não poderá ser compartilhada por usuários, bem como o restante da paginação (ex: pag de resultado 1, 2 3, 4 e por aí vai)
+
+            POST:
+
+            Esse método envia os dados do formulário pelo corpo da Requisição HTTP. Quando um usuário envia um formulário HTML usando o método HTTP POST, os dados do formulário são incluídos no corpo da requisição HTTP e enviados para o servidor. 
+
+            Nesse processo, assim como no GET, os dados do formulário também são enviados em pares nome-valor (nomenclatura do name e o dado). Para cada campo, um par de "nome-valor" é gerado para ser enviado.
+
+            Igualmente, todo componente de entrada (input) colocado dentro do formulário, com a propriedade "name" preenchida, gera um par nome=valor para ser enviado no servidor.
+
+            O servidor então processa os dados e envia uma resposta ao cliente (ex: Uma página com a mensagem "Cadastro efetuado com sucesso").
+
+            Essa resposta do servidor é enviada ao cliente (navegador) usando o mesmo protocolo HTTP que foi usado para enviar a solicitação. Quando a reposta chega no cliente, o navegador resgata o HTML e compila em formato visual para o usuário.
+
+            Obs.: No método de envio HTTP POST, os dados não ficam visíveis e expostos na URL como acontece com o método GET... Entretanto, isso não faz com que esses dados fiquem mais protegidos por causa disso, pois eles ainda podem ser visualizados pelo DevTools. Para visualizar os dados de um formulário enviados pelo método POST, basta: Abrir o DevTools > Executar a submissão de dados do formulário > Ir na Área "Network" (Rede) no DT > Arquivo do script > Payload > E aqui estarão os dados enviados. Dessa forma, se inspecionarmos a requisição pelo DT, conseguimos acessar os dados enviados.
+
+            QUANDO USAR GET OU POST?
+
+            Em que momentos devemos utilizar o GET ou POST?
+
+            GET: Basicamente você vai usar o método de envio HTTP GET quando os dados que serão enviados não forem sensíveis. Por exemplo: Nome da pessoa, peso (KG) ou buscas no estilo Google... (Quando o usuário não faz uma busca que é secreta)
+
+            POST: Existem momentos que a utilização do método POST é obrigatória. Utilize o método de envio HTTP POST quando os dados que serão enviados forem sensíveis, quando você não quiser que eles apareçam na URL. 
+
+            Por exemplo: Senha, número do cartão de crédito, endereço, CEP e por aí vai... Para fazer o envio de fotos ou QUALQUER TIPO DE ARQUIVO, use o POST também. Obs.: Se você está trabalhando com dados de cartão de crédito e senha, você terá que trabalhar com o protocolo HTTPS também, para proteger esses dados da forma adequada, apenas o POST não é o bastante.
+
+            Nota: Se existem dois verbos/métodos diferentes (GET e POST), é porque eles foram feitos para serem utilizados em locais diferentes.
+
+            As requisições do tipo GET são recomendadas para obter dados de um determinado recurso. Como em um formulário de busca ou em uma listagem de todos os produtos cadastrados. Quando você está solicitando informações para serem retornadas para você, utilize o GET.
+
+            Já as requisições POST são mais utilizadas para enviar informações para serem processadas, como por exemplo, criar algum recurso, como um produto, ou cadastrar um novo cliente. Basicamente, usamos POST quando queremos salvar alguma informação no servidor.
+
+            LIMITAÇÕES DO MÉTODO GET:
+
+            Quando enviamos dados pelo método HTTP GET, existe um limite de até 3 mil bytes de dados para a mensagem enviada (que seria aproximadamente 3 mil letras - inseridas inicialmente num formulário). Se os dados ultrapassarem esses 3 mil bytes, não vai ser possível usar o GET (use o método POST para enviar dados com mais de 3 mil bytes) - Ou seja, se tentarmos passar uma grande quantidade de informações via GET, algumas partes podem ser perdidas no caminho.
+
+            Uma outra situação em que você não vai poder usar o GET, seria em formulários que irão enviar arquivos de fotos ou qualquer tipo de arquivo. Para esses formulários que irão enviar arquivos de fotos ou qualquer tipo de arquivo, não devemos usar o GET, visto que esse método não aceita enviar arquivos. Use o método POST nesses casos.
     -->
 
 </body>
