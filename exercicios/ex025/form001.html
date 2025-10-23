@@ -12,10 +12,33 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form> <!-- Tudo aquilo que estiver dentro desse par de tags será considerado como conteúdo do formulário.  -->
-        <p>Nome: <input type="text" name="nome" id="nome"></p> <!-- input de texto -->
-        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p> <!-- input de texto -->
+    <!-- Tudo aquilo que estiver dentro da tag form será considerado como conteúdo do formulário.  -->
+    <form action="cadastro.php" autocomplete="off"> <!-- o autocomplete é pra tirar a janelinha de sugestão; o action é pra onde vai ser enviado o formulário -->
+
+        <p><label for="inome">Nome:</label> 
+            <input type="text" name="nome" id="inome"></p> <!-- input de texto -->
+
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome"></p> <!-- input de texto -->
+
         <p><input type="submit" value="Enviar"></p> <!-- input de envio -->
     </form>
+
+    <!-- 
+        INPUTS E OS ATRIBUTOS "NAME" E "ID":
+
+        id: é importante para o browser (front-end), para a manipulação do DOM, CSS e usado para criar o vínculo entre o label e o seu respectivo componente.
+
+        name: é importante para o servidor/linguagens de programação (back-end) e o HTML.
+
+        TAG <LABEL>
+        
+        O <label> é uma tag do HTML usada pra dar nome ou descrição a um campo de formulário (como um <input>). Ele ajuda tanto na aparência quanto na acessibilidade — ou seja, faz o site ficar mais fácil de usar, inclusive pra leitores de tela.
+        O que acontece:
+        O texto “Nome:” aparece antes da caixa de texto.
+        Quando a pessoa clica no texto “Nome:”, o foco vai automaticamente para o campo de entrada (<input>).
+        Isso só funciona porque o for="nome" do <label> é igual ao id="nome" do <input>.
+    -->
+
 </body>
 </html>
