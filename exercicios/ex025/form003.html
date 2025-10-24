@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome" required maxlength="30" size="30" placeholder="nome completo" autocomplete="name">
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" required min="0" max="10" placeholder="0 a 10" step="0.1"> <!-- input de número -->
+        </p>
+        <p>
+            <label for="imes">Período Letivo</label>
+            <input type="month" name="mes" id="imes" value="2025-10"> <!-- input de mês -->
+        </p>
+        <p>
+            <label for="idia">Dia da Prova</label>
+            <input type="date" name="dia" id="idia" value="2025-10-24"> <!-- input de data -->
+        </p>
+        <p>
+            <label for="ihora">Horário da Prova</label>
+            <input type="time" name="hora" id="ihora"> <!-- input de hora -->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+        <!--
+                INPUTS
+            number: Só aceita números, com botões giratórios pra ajustar valores. Placeholder funciona normalmente.
+
+            month: Seleção de mês e ano, com menu interativo. Formato enviado: yyyy-mm.
+
+            date: Para datas completas (dia/mês/ano), com calendário. Formato: yyyy-mm-dd.
+
+            time: Para hora e minuto (opcionalmente segundos). Formato: hh:mm.
+
+                  ATRIBUTOS ÚTEIS
+            min/max: Define valores mínimos e máximos. Mostra alerta se ultrapassado.
+
+            step: Define o intervalo de avanço nos botões giratórios (ex: de 3 em 3).
+
+            value: Preenche o input com um valor inicial (invalida o placeholder).
+
+            Dica: Use <label> ou placeholder pra orientar o usuário. 
+        -->
+
+    </form>
+</body>
+</html>
