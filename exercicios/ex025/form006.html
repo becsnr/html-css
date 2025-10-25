@@ -7,8 +7,36 @@
 </head>
 <body>
     <h1>Exemplo de Formulário</h1>
-    <form action="cadastro.php" method="get">
+    <form action="cadastro.php" method="post">
 
+        <p>
+            <label for="icor">Cor: </label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+        </p>
+
+        <p>
+            <label for="inivel">Nível de Satisfação: </label>
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="2">
+
+            <!-- 
+                Por padrão, o range começa sempre em 50 (no meio), variando de 0 a 100, mas pode ser personalizado, utilizando os atributos value=" ", min=" " e max=" ", respectivamente.
+            -->
+
+        </p>
+
+        <p>
+            <label for="ifoto">Foto do Perfil:</label>
+            <input type="file" name="foto" id="ifoto">
+
+            <!-- 
+                Ao trabalhar com input:file, usar sempre o atributo method="POST" dentro da tag <form>, para que não haja uma limitação de 3.000 bites no envio do arquivo.
+
+                O input do tipo file permite que o usuário escolha um arquivo do armazenamento do dispositivo e envie esse arquivo através de um formulário HTML, sendo que o elemento é mostrado como um botão que possui uma espécie de "nota de status" ao seu lado... Essa nota faz referência ao arquivo anexado. 
+
+                O input file aceita a entrada de qualquer tipo de arquivo, como por exemplo: Imagens, áudios, vídeos, documentos do word, PDF's e por aí vai.
+            -->
+
+        </p>
 
         <p>
             <input type="submit" value="Enviar">
