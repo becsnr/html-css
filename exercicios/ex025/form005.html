@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmas" value="M"> <label for="isxmas">Masculino</label>
+            <br>
+            <input type="radio" name="sexo" id="isxfem" checked value="F"> <label for="isxfem">Feminino</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="espfutebol" id="iespfutebol" checked><label for="iespfutebol"> Futebol</label> <br>
+            <input type="checkbox" name="espbasquete" id="iespbasquete"><label for="iespbasquete"> Basquete</label> <br>
+            <input type="checkbox" name="espnatacao" id="iespnatacao"><label for="iespnatacao"> Natação</label> <br>
+            <input type="checkbox" name="esptenis" id="iesptenis"><label for="iesptenis"> Tênis</label>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <!-- 
+        CHECKBOX
+        As caixas de seleção são usadas para permitir que o usuário selecione uma ou mais opções dentre um número limitado de opções. A possibilidade de selecionar mais de um item AO MESMO TEMPO é uma característica fundamental do input checkbox.
+        Atenção: No input checkbox, os atributos "name" e "id" também devem ser configurados normalmente... No entanto, quando você tem mais de um checkbox no seu form e essas caixas de seleção representam diferentes opções dentro de um mesmo contexto, é recomentado atribuir a mesma nomenclatura para os atributos "name" dessas caixas de seleção, assim especificamos que essas boxes são de um mesmo grupo e portanto elas representam diferentes opções dentro de um mesmo assunto. Assim quando o usuário selecionar as opções de seu interesse, esses dados serão enviados para o servidor identificados com o mesmo nome, indicando que fazem parte de um mesmo grupo checkbox.
+        Dessa forma, os atributos "name" são sempre iguais para cada grupo de checkbox... Por exemplo: Se no seu form você tiver DOIS GRUPOS de checkbox, para dois tipos de informações que não são correlacionadas, aí sim um desses grupos vai ter um name e o outro grupo um name diferente, desvinculando os grupos (já o id é sempre único para cada checkbox individualmente). Sendo que o VÍNCULO entre o componente checkbox e sua respectiva label também deve ser estabelecido.
+
+        RADIO
+        Os radio buttons são usados para permitir que o usuário selecione uma opção dentre um número limitado de opções. A possibilidade de selecionar APENAS UM ITEM dentre os disponíveis em um grupo é uma característica fundamental do input radio. Ao clicar em uma opção quando outra já está marcada, faz com que aquela opção marcada se desmarque automaticamente. Você pode ter vários grupos distintos de radio buttons no mesmo formulário, podendo fazer a seleção de apenas um item em cada um desses grupos.
+    -->
+</body>
+</html>
