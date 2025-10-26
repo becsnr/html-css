@@ -10,5 +10,21 @@
 </head>
 <body>
     <h1>Mude a orientação do seu dispositivo</h1>
+    <!-- 
+        Basicamente, para mudar a orientação (tela em pé ou deitada) os computadores vão pegar pela resolução da tela.
+        Se a altura estiver maior que a largura, ele está como portrait (retrato; em pé)
+        Se a largura estiver maior que a altura, ele está como landscape (paisagem; deitado)
+
+        Media Types são escritas dentro das aspas normais de media="" Exemplos:
+            media="screen" -> tela
+            media="print"  -> impressora
+            media="all"    -> configurações gerais (vai servir para todos os dispositivos, pois algumas configurações se repetem)
+
+        Media Features são escritas dentro das aspas e dentro de parênteses, logo após as media types. Exemplos:
+            media="screen and (orientation: portrait)"
+            media="screen and (orientation: landscape)"
+
+        IMPORTANTE: Media Types não tem (), Media Features tem () isoladamente, ou seja, se tivermos 3 media features, teremos 3 entre ().
+    -->
 </body>
 </html>
