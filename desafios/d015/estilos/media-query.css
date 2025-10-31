@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* Typical Device Breakpoints 
+-------------------------------
+Pequenas telas: até 640px
+Celular: de 640px até 768px
+Tablet: de 768px até 1024px
+Desktop: de 1024px até 1280px
+Grandes telas: acima de 1280px
+*/
+
+@media screen and (min-width: 768px) {
+    body, html {
+        background-image: black;
+    }
+
+    main {
+        flex-direction: row;
+        width: 80vw;
+        height: 73vh;
+    }
+
+    #imagem {
+        height: 300px;
+        width: 400px;
+        background: url(../imagens/login.jpg) no-repeat left top /cover;
+        border-radius: 20px 0 0 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body, html {
+        background-image: black;
+    }
+
+    main {
+        flex-direction: row-reverse;
+    }
+
+    #imagem {
+        border-radius: 0 20px 20px 0;
+        background-position: right;
+    }
+}
