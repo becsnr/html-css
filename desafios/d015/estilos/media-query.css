@@ -9,36 +9,46 @@ Desktop: de 1024px até 1280px
 Grandes telas: acima de 1280px
 */
 
-@media screen and (min-width: 768px) {
-    body, html {
-        background-image: black;
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    body {
+        background-image: linear-gradient(to top, #BF65BD, #3F3490);
     }
 
-    main {
-        flex-direction: row;
+    #caixa {
         width: 80vw;
-        height: 73vh;
     }
 
     #imagem {
-        height: 300px;
-        width: 400px;
-        background: url(../imagens/login.jpg) no-repeat left top /cover;
-        border-radius: 20px 0 0 20px;
+        float: left;
+        width: 30%;
+        height: 100%;
+        background-position: left;
+    }
+
+    #login {
+        float: right;
+        width: 70%;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    body, html {
-        background-image: black;
+    body {
+        background-image: linear-gradient(to top, #BF65BD, #3F3490);
     }
 
-    main {
-        flex-direction: row-reverse;
+    #caixa {
+        width: 1000px;
     }
 
     #imagem {
-        border-radius: 0 20px 20px 0;
-        background-position: right;
+        float: left;
+        width: 50%;
+        height: 100%;
+        background-position: center;
+    }
+
+    #login {
+        float: right;
+        width: 50%;
     }
 }
