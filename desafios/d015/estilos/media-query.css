@@ -29,6 +29,10 @@ Grandes telas: acima de 1280px
         float: right;
         width: 70%;
     }
+
+    #login p {
+        font-size: 1em;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -50,5 +54,13 @@ Grandes telas: acima de 1280px
     #login {
         float: right;
         width: 50%;
+    }
+
+    #login h1 {
+        font-size: 2em;
+    }
+
+    #login p {
+        font-size: 1.2em;
     }
 }

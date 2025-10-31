@@ -17,17 +17,17 @@
             <div id="login">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-                <form action="#">
+                <form action="#" method="post" autocomplete="on">
                     <div class="dados">
                         <label for="iemail"><span class="material-symbols-outlined">person</span></label>
-                        <input type="email" name="email" id="iemail" placeholder="Seu e-mail">
+                        <input type="email" name="email" id="iemail" placeholder="Seu e-mail" autocomplete="email" required maxlength="30">
                     </div>
                     <div class="dados">
                         <label for="isenha"><span class="material-symbols-outlined">key</span></label>
-                        <input type="password" name="senha" id="isenha" placeholder="Sua senha" min="8" max="15">
+                        <input type="password" name="senha" id="isenha" placeholder="Sua senha" minlength="8" maxlength="15" autocomplete="current-password" required>
                     </div>
                     <div id="entrar">
-                        <button type="submit">Entrar</button>
+                        <input type="submit" value="Entrar">
                     </div>
                     <div class="botoes">
                         <a href="#">Esqueci a senha<span class="material-symbols-outlined">mail</span></a>
